@@ -7,16 +7,15 @@ pipeline{
 		DOCKERHUB_CREDENTIALS=credentials('dockerhub')
 	}
      
-     stages {
-           stage('Cloning our Git') {
+	stages {
+		
+		stage('Cloning our Git') {
 
                  steps {
 
                        git 'https://github.com/GURU70897/dock_im.git'
                  }
            }
-
-	stages {
 
 		stage('Build') {
 
