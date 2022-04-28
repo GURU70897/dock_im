@@ -9,18 +9,10 @@ pipeline{
      
 	stages {
 		
-		stage('Cloning our Git') {
-
-                 steps {
-
-                       git 'https://github.com/GURU70897/dock_im.git'
-                 }
-           }
-
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t gururajp005/nodeapp .'
+				sh 'docker build -t gururajp005/nodeapp https://github.com/GURU70897/dock_im.git'
 			}
 		}
 
